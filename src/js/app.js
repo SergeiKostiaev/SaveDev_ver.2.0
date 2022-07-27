@@ -28,7 +28,7 @@ const back = document.getElementById('back');
 
 /// /FUNCTION ENTER BTN
 enter.onclick = function () {
-  if (modal.style.display = 'block') {
+  if (modal) {
     modalForm.style.display = 'none';
   } formEnter.style.display = 'block';
 };
@@ -52,7 +52,7 @@ terms.onclick = function () {
 };
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = 'none';
   }
 };
