@@ -1,0 +1,1 @@
+function Route(t,e,o){try{if(!t||!e)throw"error: name and htmlName params are mandatories";this.constructor(t,e,o)}catch(t){console.error(t)}}Route.prototype={name:void 0,htmlName:void 0,default:void 0,constructor(t,e,o){this.name=t,this.htmlName=e,this.default=o},isActiveRoute(t){return t.replace("#","")===this.name}};
