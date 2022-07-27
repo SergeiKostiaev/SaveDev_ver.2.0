@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="shortcut icon" href="/src/img/icon/fav.png" type="image/x-icon">
+    <title>SaveDev-Верстка однастраничников</title>
+</head>
+<body>
+    <!--POPUP REGISTR-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form method="post" action="php" id="modalForm">
+            <div class="container">
+              <h1>Регистрация</h1>
+              <p>Пожалуйста заполните все поля для регистрации аккаунта.</p>
+              <hr>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Введите Email" name="email" required>
+          
+              <label for="psw"><b>Пароль</b></label>
+              <input type="password" placeholder="Введите пароль" name="psw" required>
+          
+              <label for="psw-repeat"><b>Повторите пароль</b></label>
+              <input type="password" placeholder="Введите пароль" name="psw-repeat" required>
+              <hr>
+              <p>Создавая аккаунт вы соглашаетсяь с условиями конфеденциальности. <a id="termsLink" href="#terms">Политика конфеденциальности.</a>.</p>
+          
+              <button type="submit" class="registerbtn">РЕГИСТРАЦИЯ</button>
+            </div>
+            
+            <div class="container signin">
+              <p>Уже есть аккаунт? <a id="signIn" href="#">Войти</a>.</p>
+            </div>
+          </form>
+          <!--POPUP ENTER-->
+          <form method="post" action="php" id="enterForm" hidden>
+            <div class="container">
+              <h1>Вход</h1>
+              <p>Пожалуйста заполните все поля для входа в аккаунт.</p>
+              <hr>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Введите Email" name="email" required>
+          
+              <label for="psw"><b>Пароль</b></label>
+              <input type="password" placeholder="Введите пароль" name="psw" required>
+              <button type="submit" class="registerbtn">Вход</button>
+            </div>
+            <div class="container signin">
+              <p>Забыли пароль? <a id="signIn" href="#">Восставновить пароль</a>.</p>
+            </div>
+            <div class="container signin">
+              <a id="back"><p>Регистрация</p></a>
+            </div>
+          </form>
+        </div>     
+    </div>
+    
+    <!--POPUP BURGER-->
+    
+    <header class="header">
+        <div class="header_content">
+            <div class="header_logo">
+                <a href="#home"><img src="./src/img/logo.svg" alt="logo"></a>
+            </div>
+            <nav class="navigation">
+                <ul class="nav">
+                    <li class="nav_item"><a class="nav_link" href="#work">Услуги</a></li>
+                    <li class="nav_item"><a class="nav_link" href="#about">События</a></li>
+                    <li class="nav_item"><a class="nav_link" href="#media">Медиацентр</a></li>
+                    <li class="nav_item"><a class="nav_link" href="#career">Карьера</a></li>
+                    <li class="nav_item"><a hidden class="nav_link" href="#home">Home</a></li>
+                    <li class="nav_item"><a hidden class="nav_link" href="#login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="left_header">
+                <span id="orderBtn" class="enter">Войти</span>
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu" hidden>
+                    <nav>
+                        <li><a href="#work">Услуги</a></li>
+                        <li><a href="#about">События</a></li>
+                        <li><a href="#media">Медиацентр</a></li>
+                        <li><a href="#career">Карьера</a></li>
+                        <li><a href="#home">Домашняя страница</a></li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div id="app"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_content">
+          <div class="logo_footer">
+            <img src="/src/img/icon/logo_mini 2.svg" alt="logo_mini">
+            <p><b>SaveDevelopment</b></p>
+          </div>
+          <div class="contacts">
+            <p class="design">Designed by SaveDev</p>
+            <div class="link_phone">
+              <a href="tel:+79163708419">+7(916) 370 84 19</a>
+              <a href="tel:+79124536413">+7(912) 453 64 13</a>
+            </div>
+          </div>
+        </div>
+        <p><a href="#"> Оставить отзыв о сайте </a><br>
+          © 2022 Официальный сайт «SaveDev»</p>
+    </footer>
+
+    <script type="module" src="./src/js/app.js"></script>
+    <script src="./src/js/route.js"></script>
+    <script src="./src/js/router.js"></script>
+</body>
+</html>
